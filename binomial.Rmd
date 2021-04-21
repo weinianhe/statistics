@@ -11,6 +11,15 @@ Permutation: (n,r) = n! / (n-r)!
 
 https://www.mathplanet.com/education/algebra-2/discrete-mathematics-and-probability/permutations-and-combinations#:~:text=One%20could%20say%20that%20a,(n%E2%88%92r)!
 
+(8,5) = 8!/ ((8-5)!5!) = 8!/ (3!5!)
+(8,3) = 8!/ ((8-3)!3!) = 8!/ (5!3!)
+
+How many ways ABABABBB to be permutated. choose where 3A'S goes in the 8 slots ( or equivalent where 5B) goes.
+
+
+Probably of full house. three cards of some rank, and two cards of another rank. three 7's and two 10's in any order.
+13 (4,3) 12 (4,2) / (52, 5) = 3744/2598960 ~= 0.00144.
+
 
 
 
