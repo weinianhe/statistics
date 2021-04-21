@@ -17,8 +17,11 @@ https://www.mathplanet.com/education/algebra-2/discrete-mathematics-and-probabil
 How many ways ABABABBB to be permutated. choose where 3A'S goes in the 8 slots ( or equivalent where 5B) goes.
 
 
-Probably of full house. three cards of some rank, and two cards of another rank. three 7's and two 10's in any order.
+Probably of full house. three cards of some rank, and two cards of another rank. three 7's and two 10's in any order. https://www.thoughtco.com/standard-deck-of-cards-3126599
+
 13 (4,3) 12 (4,2) / (52, 5) = 3744/2598960 ~= 0.00144.
+
+
 
 
 
