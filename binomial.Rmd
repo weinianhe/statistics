@@ -6,6 +6,21 @@ Binomial Coefficent Formula sometimes call combination (order doesn't matter)
 For k<= n, (n k) = n(n-1)...(n-k+1) / k! = n!/((n-k)!k!)
 For k>n, (n k) = 0.
 
+https://www.r-bloggers.com/2019/06/learning-r-permutations-and-combinations-with-base-r/
+```{r}
+C_wo <-combn(1:4,3) #generate all the possible combination
+choose(4,3) # mathmatically computes the value
+4*3*2 / (3*2*1) # expand in formula
+ncol(C_wo) # count number of column to get the same result.
+```
+
+```{r}
+choose(49,6)
+C_wo <- combn(1:49,6)
+C_wo[, 1:10]
+ncol(C_wo)
+```
+
 
 Permutation: (n,r) = n! / (n-r)!
 
@@ -24,9 +39,15 @@ Probably of full house. three cards of some rank, and two cards of another rank.
 
 
 
+(n k) = n(n-1)...(n-k+1) / k! = n!/((n-k)!k!)
+n * (n-1, k-1) = k (n, k)
+n * ((n-1)(n-1-1)... ((n-1)-(k-1)+1)) / (k-1)!
+n * (n-1)(n-2)...(n-1-k+1+1) /(k-1)!
+n (n-1) (n-2) ... (n-k+1)/ (k-1)!  = k * (n) (n-1)... (n-k+1) / k! = (n)(n-1)...(n-k+1) / (k-1)!
 
-
-
+Vandermonde's Identity
+(m+n, k) = \sum_j=0^k (m,j) (n, k-j)
+Story proof Consider a group of 𝑚 peacocks and 𝑛 toucans, from which a set of size 𝑘 birds will be chosen. There are (𝑚+𝑛,𝑘) possibilities for this set of birds. If there are 𝑗 peacocks in the set, then there must be 𝑘−𝑗 toucans in the set. The right-hand side of Vandermonde's identity sums up the cases for 𝑗.
 
 
 

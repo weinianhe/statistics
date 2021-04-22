@@ -216,12 +216,67 @@ pre code {
 
 <!-- rnb-text-begin -->
 <p>Binomial Coefficent Formula sometimes call combination (order doesn’t matter) For k&lt;= n, (n k) = n(n-1)…(n-k+1) / k! = n!/((n-k)!k!) For k&gt;n, (n k) = 0.</p>
+<p><a href="https://www.r-bloggers.com/2019/06/learning-r-permutations-and-combinations-with-base-r/" class="uri">https://www.r-bloggers.com/2019/06/learning-r-permutations-and-combinations-with-base-r/</a></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQ193byA8LWNvbWJuKDE6NCwzKVxuY2hvb3NlKDQsMylcbmBgYCJ9 -->
+<pre class="r"><code>C_wo &lt;-combn(1:4,3)
+choose(4,3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuNCozKjIgLyAoMyoyKjEpXG5gYGAifQ== -->
+<pre class="r"><code>4*3*2 / (3*2*1)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNvbChDX3dvKVxuYGBgIn0= -->
+<pre class="r"><code>ncol(C_wo)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDRcbiJ9 -->
+<pre><code>[1] 4</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hvb3NlKDQ5LDYpXG5gYGAifQ== -->
+<pre class="r"><code>choose(49,6)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEzOTgzODE2XG4ifQ== -->
+<pre><code>[1] 13983816</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQ193byA8LSBjb21ibigxOjQ5LDYpXG5DX3dvWywgMToxMF1cbmBgYCJ9 -->
+<pre class="r"><code>C_wo &lt;- combn(1:49,6)
+C_wo[, 1:10]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXSBbLDRdIFssNV0gWyw2XSBbLDddIFssOF0gWyw5XSBbLDEwXVxuWzEsXSAgICAxICAgIDEgICAgMSAgICAxICAgIDEgICAgMSAgICAxICAgIDEgICAgMSAgICAgMVxuWzIsXSAgICAyICAgIDIgICAgMiAgICAyICAgIDIgICAgMiAgICAyICAgIDIgICAgMiAgICAgMlxuWzMsXSAgICAzICAgIDMgICAgMyAgICAzICAgIDMgICAgMyAgICAzICAgIDMgICAgMyAgICAgM1xuWzQsXSAgICA0ICAgIDQgICAgNCAgICA0ICAgIDQgICAgNCAgICA0ICAgIDQgICAgNCAgICAgNFxuWzUsXSAgICA1ICAgIDUgICAgNSAgICA1ICAgIDUgICAgNSAgICA1ICAgIDUgICAgNSAgICAgNVxuWzYsXSAgICA2ICAgIDcgICAgOCAgICA5ICAgMTAgICAxMSAgIDEyICAgMTMgICAxNCAgICAxNVxuIn0= -->
+<pre><code>     [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
+[1,]    1    1    1    1    1    1    1    1    1     1
+[2,]    2    2    2    2    2    2    2    2    2     2
+[3,]    3    3    3    3    3    3    3    3    3     3
+[4,]    4    4    4    4    4    4    4    4    4     4
+[5,]    5    5    5    5    5    5    5    5    5     5
+[6,]    6    7    8    9   10   11   12   13   14    15</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmNvbChDX3dvKVxuYGBgIn0= -->
+<pre class="r"><code>ncol(C_wo)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEzOTgzODE2XG4ifQ== -->
+<pre><code>[1] 13983816</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Permutation: (n,r) = n! / (n-r)!</p>
 <p><a href="https://www.mathplanet.com/education/algebra-2/discrete-mathematics-and-probability/permutations-and-combinations#" class="uri">https://www.mathplanet.com/education/algebra-2/discrete-mathematics-and-probability/permutations-and-combinations#</a>:~:text=One%20could%20say%20that%20a,(n%E2%88%92r)!</p>
 <p>(8,5) = 8!/ ((8-5)!5!) = 8!/ (3!5!) (8,3) = 8!/ ((8-3)!3!) = 8!/ (5!3!)</p>
 <p>How many ways ABABABBB to be permutated. choose where 3A’S goes in the 8 slots ( or equivalent where 5B) goes.</p>
 <p>Probably of full house. three cards of some rank, and two cards of another rank. three 7’s and two 10’s in any order. <a href="https://www.thoughtco.com/standard-deck-of-cards-3126599" class="uri">https://www.thoughtco.com/standard-deck-of-cards-3126599</a></p>
 <p>13 (4,3) 12 (4,2) / (52, 5) = 3744/2598960 ~= 0.00144.</p>
+<p>(n k) = n(n-1)…(n-k+1) / k! = n!/((n-k)!k!) n * (n-1, k-1) = k (n, k) n * ((n-1)(n-1-1)… ((n-1)-(k-1)+1)) / (k-1)! n * (n-1)(n-2)…(n-1-k+1+1) /(k-1)! n (n-1) (n-2) … (n-k+1)/ (k-1)! = k * (n) (n-1)… (n-k+1) / k! = (n)(n-1)…(n-k+1) / (k-1)!</p>
+<p>Vandermonde’s Identity (m+n, k) = _j=0^k (m,j) (n, k-j) Story proof Consider a group of 𝑚 peacocks and 𝑛 toucans, from which a set of size 𝑘 birds will be chosen. There are (𝑚+𝑛,𝑘) possibilities for this set of birds. If there are 𝑗 peacocks in the set, then there must be 𝑘−𝑗 toucans in the set. The right-hand side of Vandermonde’s identity sums up the cases for 𝑗.</p>
 <p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
 <p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Cmd+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
@@ -236,7 +291,7 @@ pre code {
 <p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpCaW5vbWlhbCBDb2VmZmljZW50IEZvcm11bGEgc29tZXRpbWVzIGNhbGwgY29tYmluYXRpb24gKG9yZGVyIGRvZXNuJ3QgbWF0dGVyKQpGb3Igazw9IG4sIChuIGspID0gbihuLTEpLi4uKG4taysxKSAvIGshID0gbiEvKChuLWspIWshKQpGb3Igaz5uLCAobiBrKSA9IDAuCgoKUGVybXV0YXRpb246IChuLHIpID0gbiEgLyAobi1yKSEKCmh0dHBzOi8vd3d3Lm1hdGhwbGFuZXQuY29tL2VkdWNhdGlvbi9hbGdlYnJhLTIvZGlzY3JldGUtbWF0aGVtYXRpY3MtYW5kLXByb2JhYmlsaXR5L3Blcm11dGF0aW9ucy1hbmQtY29tYmluYXRpb25zIzp+OnRleHQ9T25lJTIwY291bGQlMjBzYXklMjB0aGF0JTIwYSwobiVFMiU4OCU5MnIpIQoKKDgsNSkgPSA4IS8gKCg4LTUpITUhKSA9IDghLyAoMyE1ISkKKDgsMykgPSA4IS8gKCg4LTMpITMhKSA9IDghLyAoNSEzISkKCkhvdyBtYW55IHdheXMgQUJBQkFCQkIgdG8gYmUgcGVybXV0YXRlZC4gY2hvb3NlIHdoZXJlIDNBJ1MgZ29lcyBpbiB0aGUgOCBzbG90cyAoIG9yIGVxdWl2YWxlbnQgd2hlcmUgNUIpIGdvZXMuCgoKUHJvYmFibHkgb2YgZnVsbCBob3VzZS4gdGhyZWUgY2FyZHMgb2Ygc29tZSByYW5rLCBhbmQgdHdvIGNhcmRzIG9mIGFub3RoZXIgcmFuay4gdGhyZWUgNydzIGFuZCB0d28gMTAncyBpbiBhbnkgb3JkZXIuIGh0dHBzOi8vd3d3LnRob3VnaHRjby5jb20vc3RhbmRhcmQtZGVjay1vZi1jYXJkcy0zMTI2NTk5CgoxMyAoNCwzKSAxMiAoNCwyKSAvICg1MiwgNSkgPSAzNzQ0LzI1OTg5NjAgfj0gMC4wMDE0NC4KCgoKCgoKCgoKClRoaXMgaXMgYW4gW1IgTWFya2Rvd25dKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20pIE5vdGVib29rLiBXaGVuIHlvdSBleGVjdXRlIGNvZGUgd2l0aGluIHRoZSBub3RlYm9vaywgdGhlIHJlc3VsdHMgYXBwZWFyIGJlbmVhdGggdGhlIGNvZGUuIAoKVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkNtZCtTaGlmdCtFbnRlciouIAoKYGBge3J9CnBsb3QoY2FycykKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQpCaW5vbWlhbCBDb2VmZmljZW50IEZvcm11bGEgc29tZXRpbWVzIGNhbGwgY29tYmluYXRpb24gKG9yZGVyIGRvZXNuJ3QgbWF0dGVyKQpGb3Igazw9IG4sIChuIGspID0gbihuLTEpLi4uKG4taysxKSAvIGshID0gbiEvKChuLWspIWshKQpGb3Igaz5uLCAobiBrKSA9IDAuCgpodHRwczovL3d3dy5yLWJsb2dnZXJzLmNvbS8yMDE5LzA2L2xlYXJuaW5nLXItcGVybXV0YXRpb25zLWFuZC1jb21iaW5hdGlvbnMtd2l0aC1iYXNlLXIvCmBgYHtyfQpDX3dvIDwtY29tYm4oMTo0LDMpICNnZW5lcmF0ZSBhbGwgdGhlIHBvc3NpYmxlIGNvbWJpbmF0aW9uCmNob29zZSg0LDMpICMgbWF0aG1hdGljYWxseSBjb21wdXRlcyB0aGUgdmFsdWUKNCozKjIgLyAoMyoyKjEpICMgZXhwYW5kIGluIGZvcm11bGEKbmNvbChDX3dvKSAjIGNvdW50IG51bWJlciBvZiBjb2x1bW4gdG8gZ2V0IHRoZSBzYW1lIHJlc3VsdC4KYGBgCgpgYGB7cn0KY2hvb3NlKDQ5LDYpCkNfd28gPC0gY29tYm4oMTo0OSw2KQpDX3dvWywgMToxMF0KbmNvbChDX3dvKQpgYGAKCgpQZXJtdXRhdGlvbjogKG4scikgPSBuISAvIChuLXIpIQoKaHR0cHM6Ly93d3cubWF0aHBsYW5ldC5jb20vZWR1Y2F0aW9uL2FsZ2VicmEtMi9kaXNjcmV0ZS1tYXRoZW1hdGljcy1hbmQtcHJvYmFiaWxpdHkvcGVybXV0YXRpb25zLWFuZC1jb21iaW5hdGlvbnMjOn46dGV4dD1PbmUlMjBjb3VsZCUyMHNheSUyMHRoYXQlMjBhLChuJUUyJTg4JTkycikhCgooOCw1KSA9IDghLyAoKDgtNSkhNSEpID0gOCEvICgzITUhKQooOCwzKSA9IDghLyAoKDgtMykhMyEpID0gOCEvICg1ITMhKQoKSG93IG1hbnkgd2F5cyBBQkFCQUJCQiB0byBiZSBwZXJtdXRhdGVkLiBjaG9vc2Ugd2hlcmUgM0EnUyBnb2VzIGluIHRoZSA4IHNsb3RzICggb3IgZXF1aXZhbGVudCB3aGVyZSA1QikgZ29lcy4KCgpQcm9iYWJseSBvZiBmdWxsIGhvdXNlLiB0aHJlZSBjYXJkcyBvZiBzb21lIHJhbmssIGFuZCB0d28gY2FyZHMgb2YgYW5vdGhlciByYW5rLiB0aHJlZSA3J3MgYW5kIHR3byAxMCdzIGluIGFueSBvcmRlci4gaHR0cHM6Ly93d3cudGhvdWdodGNvLmNvbS9zdGFuZGFyZC1kZWNrLW9mLWNhcmRzLTMxMjY1OTkKCjEzICg0LDMpIDEyICg0LDIpIC8gKDUyLCA1KSA9IDM3NDQvMjU5ODk2MCB+PSAwLjAwMTQ0LgoKCgoKKG4gaykgPSBuKG4tMSkuLi4obi1rKzEpIC8gayEgPSBuIS8oKG4taykhayEpCm4gKiAobi0xLCBrLTEpID0gayAobiwgaykKbiAqICgobi0xKShuLTEtMSkuLi4gKChuLTEpLShrLTEpKzEpKSAvIChrLTEpIQpuICogKG4tMSkobi0yKS4uLihuLTEtaysxKzEpIC8oay0xKSEKbiAobi0xKSAobi0yKSAuLi4gKG4taysxKS8gKGstMSkhICA9IGsgKiAobikgKG4tMSkuLi4gKG4taysxKSAvIGshID0gKG4pKG4tMSkuLi4obi1rKzEpIC8gKGstMSkhCgpWYW5kZXJtb25kZSdzIElkZW50aXR5CihtK24sIGspID0gXHN1bV9qPTBeayAobSxqKSAobiwgay1qKQpTdG9yeSBwcm9vZiBDb25zaWRlciBhIGdyb3VwIG9mIPCdkZogcGVhY29ja3MgYW5kIPCdkZsgdG91Y2FucywgZnJvbSB3aGljaCBhIHNldCBvZiBzaXplIPCdkZggYmlyZHMgd2lsbCBiZSBjaG9zZW4uIFRoZXJlIGFyZSAo8J2RmivwnZGbLPCdkZgpIHBvc3NpYmlsaXRpZXMgZm9yIHRoaXMgc2V0IG9mIGJpcmRzLiBJZiB0aGVyZSBhcmUg8J2RlyBwZWFjb2NrcyBpbiB0aGUgc2V0LCB0aGVuIHRoZXJlIG11c3QgYmUg8J2RmOKIkvCdkZcgdG91Y2FucyBpbiB0aGUgc2V0LiBUaGUgcmlnaHQtaGFuZCBzaWRlIG9mIFZhbmRlcm1vbmRlJ3MgaWRlbnRpdHkgc3VtcyB1cCB0aGUgY2FzZXMgZm9yIPCdkZcuCgoKClRoaXMgaXMgYW4gW1IgTWFya2Rvd25dKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20pIE5vdGVib29rLiBXaGVuIHlvdSBleGVjdXRlIGNvZGUgd2l0aGluIHRoZSBub3RlYm9vaywgdGhlIHJlc3VsdHMgYXBwZWFyIGJlbmVhdGggdGhlIGNvZGUuIAoKVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkNtZCtTaGlmdCtFbnRlciouIAoKYGBge3J9CnBsb3QoY2FycykKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoK</div>
 
 
 
