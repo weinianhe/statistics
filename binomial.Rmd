@@ -11,6 +11,7 @@ https://www.r-bloggers.com/2019/06/learning-r-permutations-and-combinations-with
 C_wo <-combn(1:4,3) #generate all the possible combination
 choose(4,3) # mathmatically computes the value
 4*3*2 / (3*2*1) # expand in formula
+factorial(4)/ (factorial(4-3) * factorial(3)) # expand algerbric formula
 ncol(C_wo) # count number of column to get the same result.
 ```
 
@@ -49,6 +50,9 @@ Vandermonde's Identity
 (m+n, k) = \sum_j=0^k (m,j) (n, k-j)
 Story proof Consider a group of 𝑚 peacocks and 𝑛 toucans, from which a set of size 𝑘 birds will be chosen. There are (𝑚+𝑛,𝑘) possibilities for this set of birds. If there are 𝑗 peacocks in the set, then there must be 𝑘−𝑗 toucans in the set. The right-hand side of Vandermonde's identity sums up the cases for 𝑗.
 
+For any events 𝐴1,…,𝐴𝑛,
+
+𝑃(⋃𝑖=1𝑛𝐴𝑖)=∑𝑖𝑃(𝐴𝑖)−∑𝑖<𝑗𝑃(𝐴𝑖∩𝐴𝑗)+∑𝑖<𝑗<𝑘𝑃(𝐴𝑖∩𝐴𝑗∩𝐴𝑘)−…+(−1)𝑛+1𝑃(𝐴1∩⋯∩𝐴𝑛).
 
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
